@@ -1,0 +1,133 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(193, 219, 193);
+      color: #222;
+      min-height: 100vh;
+    }
+
+    header {
+      background:  #FB3F1D;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro h2 {
+      font-size: 1.8rem;
+      color: #1e3a5f;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+ .projects-table {
+    width: 100%;
+    border-spacing: 25px 30px;   
+          
+}
+
+.project-cell {
+    width: 25%;                  
+    vertical-align: top;
+    padding: 0;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    height: 100%;                
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    
+}
+
+.project-info {
+    padding: 20px 24px 28px;
+    text-align: center;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #222;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 20px;
+    min-height: 90px;            
+}
+
+.btn-project {
+    background: #FB3F1D;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+.btn-project:hover {
+    background: #d32f0f;
+}
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+      background: #2f3742;
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .intro h2 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        min-height: auto;
+      }
+    }
