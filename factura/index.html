@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="main-wrapper">
+
+    <div class="encabezado">
+
+      <!-- Logo y nombre empresa -->
+      <div class="header-left">
+        <div class="img_header">
+          <img src="./img_logosf.png" alt="Logo">
+        </div>
+        <div class="headerA">
+          <h2>SERVI RUTA</h2>
+          <p>COMPAÑÍA DE TRANSPORTE</p>
+        </div>
+      </div>
+
+      <!-- Factura info -->
+      <div class="headerB">
+        <h1>FACTURA</h1>
+        <div class="factura-info">
+          <div class="factura-row">
+            <span class="factura-label">Número Factura:</span>
+            <span class="factura-value">#000001</span>
+          </div>
+          <div class="factura-row">
+            <span class="factura-label">No cuenta:</span>
+            <span class="factura-value">1234 5678 9086</span>
+          </div>
+          <div class="factura-row">
+            <span class="factura-label">Fecha Factura:</span>
+            <span class="factura-value">04/04/2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <main class="cuerpo-factura">
+      <section class="invoice-info">
+        <div class="invoice-to">
+          <h3 class="orange-title">Factura Para:</h3>
+          <h2 class="client-name">Sergio Sarmiento.</h2>
+          <p>Director General, Servi Ruta S.A.S</p>
+          <p>Telefono: +57 314 4513234</p>
+          <p>Email: serviruta@gmail.com</p>
+        </div>
+        <div class="payment-method">
+          <h3 class="orange-title">Método de pago</h3>
+          <div class="payment-row">
+            <span class="pay-label">Cuenta No:</span>
+            <span class="pay-value">1234 5678 910</span>
+          </div>
+          <div class="payment-row">
+            <span class="pay-label">Nombre de la cuenta:</span>
+            <span class="pay-value">Sergio Sarmiento.</span>
+          </div>
+          <div class="payment-row">
+            <span class="pay-label">Sucursal :</span>
+            <span class="pay-value">Servi Ruta S.A.S</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="invoice-details">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th class="col-date">Fecha</th>
+              <th class="col-desc">Descripción</th>
+              <th class="col-price text-right">Precio</th>
+              <th class="col-qty text-center">Cantidad</th>
+              <th class="col-total text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Servicio de transporte</td>
+              <td class="text-right">20.000 $</td>
+              <td class="text-center">3</td>
+              <td class="text-right">60.000 $</td>
+            </tr>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Empaque y embalaje</td>
+              <td class="text-right">10.000 $</td>
+              <td class="text-center">45</td>
+              <td class="text-right">450.000 $</td>
+            </tr>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Cargue y Descargue</td>
+              <td class="text-right">17.000 $</td>
+              <td class="text-center">90</td>
+              <td class="text-right">1.530.000 $</td>
+            </tr>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Peajes</td>
+              <td class="text-right">100.000 $</td>
+              <td class="text-center">3</td>
+              <td class="text-right">300.000 $</td>
+            </tr>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Combustible</td>
+              <td class="text-right">100.000 $</td>
+              <td class="text-center">5 Galones</td>
+              <td class="text-right">500.000 $</td>
+            </tr>
+            <tr>
+              <td>04/04/2026</td>
+              <td>Viáticos</td>
+              <td class="text-right">100.000 $</td>
+              <td class="text-center">3</td>
+              <td class="text-right">300.000 $</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="invoice-summary">
+        <div class="summary-box">
+          <div class="summary-row">
+            <span class="summary-label">Subtotal:</span>
+            <span class="summary-value">3.140.000 $</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Descuento:</span>
+            <span class="summary-value">15%</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Impuesto (19%):</span>
+            <span class="summary-value">507.110 $</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="total-bar">
+        <span class="total-label">Total:</span>
+        <span class="total-amount">3.176.110 $</span>
+      </div>
+    </main>
+
+    <footer class="invoice-footer">
+      <div class="terms-conditions">
+        <h4 class="black-title">Términos & Condiciones</h4>
+        <p>1. Por favor pagar dentro de los 15 días posteriores a la recepción de esta factura.</p>
+        <p>2. Si tiene alguna pregunta sobre esta factura, utilice la siguiente información de contacto.</p>
+      </div>
+      <div class="signature-box">
+        <div class="signature-line"></div>
+        <p>Firma</p>
+      </div>
+    </footer>
+
+    <!-- FOOTER DECORATIVO CORRECTO -->
+    <div class="footer-decoration">
+      <div class="footer-orange"></div>
+      <div class="footer-white"></div>
+      <div class="footer-black"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
