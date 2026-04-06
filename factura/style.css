@@ -22,9 +22,9 @@ body {
     overflow: hidden;
 }
 
-/* =========================
+/*
    ENCABEZADO
-========================= */
+ */
 .encabezado {
     display: flex;
     justify-content: space-between;
@@ -72,7 +72,7 @@ body {
             47px 100%);
 }
 
-/* HEADER LEFT */
+/* HEADER IZQUIERDA */
 .header-left {
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@ body {
     font-weight: 700;
 }
 
-/* HEADER RIGHT */
+/* HEADER DERECHA */
 .headerB {
     display: flex;
     flex-direction: column;
@@ -172,9 +172,9 @@ body {
     text-align: right;
 }
 
-/* =========================
+/*
    CUERPO FACTURA
-========================= */
+ */
 .cuerpo-factura {
     padding: 0 50px 30px 50px;
 }
@@ -338,9 +338,9 @@ body {
     text-align: right;
 }
 
-/* =========================
+/* 
    FOOTER LEGAL
-========================= */
+ */
 .invoice-footer {
     display: flex;
     justify-content: space-between;
@@ -389,9 +389,9 @@ body {
     letter-spacing: 1px;
 }
 
-/* =========================
-   FOOTER DECORATIVO CORRECTO
-========================= */
+/* 
+   FOOTER DECORATIVO 
+ */
 .footer-decoration {
     position: relative;
     width: 100%;
