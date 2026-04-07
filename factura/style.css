@@ -93,7 +93,6 @@ body {
 .img_header img {
     width: 100%;
     height: auto;
-    filter: brightness(0) invert(0.6) sepia(1) hue-rotate(350deg) saturate(3);
 }
 
 .headerA {
