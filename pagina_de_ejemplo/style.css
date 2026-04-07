@@ -1,212 +1,252 @@
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Hace que los tamaños sean más fáciles de manejar */
 }
 
+/* Estilo general de toda la página */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    color: #333;
+    color: #333; 
 }
 
-
-.tabla1 {
+/* Parte de arriba de la página */
+.header {
     background: #3a3a3a;
     width: 100%;
-}
-
-.tabla1 table {
-    width: 100%;
-}
-
-.tabla1 td {
     padding: 16px 32px;
+    overflow: hidden; /* Evita que floats dañen el contenedor */
 }
 
+/* Caja izquierda del header */
 .caja1 {
+    float: left;
     text-align: left;
+    padding: 0 100px 0 0;
+    line-height: 25px; /* alinear mejor el texto */
 }
 
-.texto1, .texto2 {
+/* Primer texto del header */
+.texto1 {
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 300px;
+}
+
+/* Segundo texto del header */
+.texto2 {
     color: white;
     font-size: 1.2rem;
 }
 
-.texto1 {
-    font-weight: 900;
-}
-
-.texto2 {
-    font-weight: 400;
-}
-
+/* Caja derecha del header */
 .caja2 {
+    float: right;
     text-align: right;
+    padding-right: 300px;
+    line-height: 25px;
 }
 
+/* Estilo de los links del menú */
 .caja2 a {
     color: #ccc;
-    text-decoration: none;
-    margin-left: 28px;
+    text-decoration: none; /* Quita el subrayado */
+    margin-left: 28px; /* Separa un enlace del otro */
+    display: inline-block;
 }
 
-
-.tabla2 {
-    padding: 60px 0;
-}
-
-.tabla2 table {
+/* parte de presentación  */
+.about-section {
+    padding: 10px 0;
     width: 90%;
-    margin: auto;
+    margin: auto; /* Centra la sección */
+    overflow: hidden; /* Hace que los floats no dañen la estructura */
 }
 
+/* Caja de la imagen */
 .caja3 {
+    float: left;
     width: 50%;
     text-align: center;
 }
 
+/* Imagen principal */
 .caja3 img {
-    max-width: 100%;
+    max-width: 100%; /* Evita que la imagen se salga */
+    vertical-align: middle;
 }
 
+/* Caja del texto al lado de la imagen */
 .caja4 {
+    float: left;
     width: 50%;
-    padding-left: 40px;
+    padding: 40px;
 }
 
+/* Título grande */
 #qs {
     font-size: 70px;
     color: #FB3F1D;
     margin-bottom: 20px;
 }
 
+/* Párrafos  */
 .caja4 p {
     margin-bottom: 30px;
+    line-height: 1.5; /* Hace que el texto se vea más cómodo de leer */
 }
 
+/* Botón principal */
 .boton1 {
     background: #FB3F1D;
     color: white;
     padding: 14px 30px;
     border-radius: 5px;
     border: 2px solid black;
+    text-decoration: none;
+    display: inline-block;
 }
 
-
+/* Botón secundario o más pequeño */
 .boton2 {
     background: #FB3F1D;
     color: #e0e0e0;
     border-radius: 5px;
     border: 2px solid black;
-    margin:20px auto;
+    margin: 20px auto;
     padding: 5px;
     width: 100px;
-
+    display: block;
 }
 
-.tabla3 {
+/* Sección naranja de frase o presentación */
+.quote-section {
     background: #FB3F1D;
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
+    clear: both; /* Hace que esta sección no se suba encima de las anteriores */
 }
 
+/* Imagen redonda */
 .caja5 img {
     width: 220px;
     height: 220px;
-    border-radius: 50%;
+    border-radius: 50%; /* Convierte la imagen en círculo */
     border: 6px solid white;
-    display: block;
     margin: auto;
+    display: block;
 }
 
+/* Texto principal de esta sección */
 .texto3 {
     color: white;
     font-size: 1.4rem;
     padding: 20px 40px;
     width: 50%;
-    margin: auto;
+    margin: 20px auto;
 }
 
+ 
 .texto4 {
     color: white;
     font-style: italic;
+    font-size: 20px;
 }
 
-.tabla4 {
-    padding: 60px 20px;
+/* Sección donde van los proyectos */
+.projects-section {
+    padding: 10px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    clear: both;
 }
 
-.tabla4 h2 {
+/* Título de la sección de proyectos */
+.projects-section h2 {
     text-align: center;
     font-size: 2.8rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #333;
 }
 
-.projects-table {
-    width: 100%;
-    border-spacing: 25px 30px;
-    table-layout: fixed;
+/* Contenedor general de las tarjetas */
+.projects-container {
+    overflow: hidden; /* Mantiene ordenados los elementos flotantes */
+    margin: 0 -12.5px;
 }
 
+/* Cada espacio donde va una tarjeta */
 .project-cell {
-    width: 25%;
-    vertical-align: top;
-    padding: 0;
+    float: left;
+    width: 25%; /* Hace que salgan 4 tarjetas por fila */
+    padding: 0 12.5px;
+    margin-bottom: 30px;
 }
 
+/* Tarjeta de cada proyecto */
 .project-card {
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
+    overflow: hidden; /* Recorta lo que se salga */
     height: 100%;
-    overflow: hidden;
 }
 
+/* Imagen de cada tarjeta */
 .project-card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    vertical-align: top;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
 }
 
+/* Parte donde va el texto de la tarjeta */
 .project-info {
     padding: 20px 24px 28px;
     text-align: center;
 }
 
+/* Título del proyecto */
 .project-info h3 {
     font-size: 20px;
     margin: 0 0 12px;
     color: #222;
 }
 
+/* Descripción del proyecto */
 .project-info p {
     font-size: 1rem;
     color: #666;
     line-height: 1.5;
     margin: 0 0 20px;
-    min-height: 350px;
+    min-height: 350px; /* Ayuda a que todas las tarjetas queden parejas */
 }
 
+/* Botón de cada proyecto */
 .btn-project {
     background: #FB3F1D;
     color: white;
     padding: 10px 24px;
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: bold; /* Hace que el texto del botón resalte más */
     border: 2px solid #000;
+    text-decoration: none;
+    display: inline-block;
 }
 
+/* Cambio de color cuando se pasa el mouse */
 .btn-project:hover {
     background: #d32f0f;
 }
+
+/* Pie de página */
 .pie {
     background: #2f3742;
     color: white;
-    padding: 15px;
+    padding: 15px 370px;
     text-align: right;
     font-size: 14px;
+    clear: both; /* Evita que se mezcle con lo de arriba */
 }
