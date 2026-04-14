@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +46,6 @@ body {
     float: right;
     text-align: right;
     padding-right: 140px;
-    line-height: 25px;
 }
 
 /* Estilo de los links del menú */
@@ -114,7 +112,6 @@ body {
     background: #FB3F1D;
     padding: 20px 20px;
     text-align: center;
-    clear: both; /* Hace que esta sección no se suba encima de las anteriores */
 }
 
 /* Imagen redonda */
@@ -147,7 +144,6 @@ body {
     padding: 10px 20px;
     max-width: 85%; /* Modificado para ocupar más espacio y acercarse a los bordes */
     margin: 0 auto;
-    clear: both;
 }
 
 /* Título de la sección de proyectos */
@@ -169,7 +165,7 @@ body {
     float: left;
     width: 25%; /* Hace que salgan 4 tarjetas por fila */
     padding: 0 12.5px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Reducido para acercar las tarjetas al footer */
 }
 
 /* Tarjeta de cada proyecto */
@@ -231,6 +227,10 @@ body {
 .pie {
     background: #2f3742;
     color: white;
+    padding: 15px 160px;
+    text-align: right;
+    font-size: 14px;
+}
     padding: 15px 160px;
     text-align: right;
     font-size: 14px;
