@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +25,7 @@ body {
 .caja1 {
     float: left;
     text-align: left;
-    padding: 0 100px 0 0;
+    padding-left: 70px;
     line-height: 25px; /* alinear mejor el texto */
 }
 
@@ -32,7 +33,7 @@ body {
 .texto1 {
     color: white;
     font-size: 19.2px;
-    padding-left: 140px;
+    padding-left: 80px;
 }
 
 /* Segundo texto del header */
@@ -74,6 +75,7 @@ body {
 /* Imagen principal */
 .caja3 img {
     max-width: 100%; /* Evita que la imagen se salga */
+    padding-left: 200px;
 }
 
 /* Caja del texto al lado de la imagen */
