@@ -13,7 +13,7 @@ body {
 }
 
 /* Parte de arriba de la página */
-.header {
+.encabezado {
     background: #3a3a3a;
     width: 100%;
     padding: 16px 32px;
@@ -31,21 +31,21 @@ body {
 /* Primer texto del header */
 .texto1 {
     color: white;
-    font-size: 1.2rem;
-    padding-left: 340px;
+    font-size: 19.2px;
+    padding-left: 140px;
 }
 
 /* Segundo texto del header */
 .texto2 {
     color: white;
-    font-size: 1.2rem;
+    font-size: 19.2px;
 }
 
 /* Caja derecha del header */
 .caja2 {
     float: right;
     text-align: right;
-    padding-right: 350px;
+    padding-right: 140px;
     line-height: 25px;
 }
 
@@ -54,11 +54,10 @@ body {
     color: #ccc;
     text-decoration: none; /* Quita el subrayado */
     margin-left: 28px; /* Separa un enlace del otro */
-    display: inline-block;
 }
 
 /* parte de presentación  */
-.about-section {
+.seccion-quien-soy {
     padding: 10px 0;
     width: 90%;
     margin: auto; /* Centra la sección */
@@ -75,7 +74,6 @@ body {
 /* Imagen principal */
 .caja3 img {
     max-width: 100%; /* Evita que la imagen se salga */
-    vertical-align: middle;
 }
 
 /* Caja del texto al lado de la imagen */
@@ -106,23 +104,11 @@ body {
     border-radius: 5px;
     border: 2px solid black;
     text-decoration: none;
-    display: inline-block;
-}
-
-/* Botón secundario o más pequeño */
-.boton2 {
-    background: #FB3F1D;
-    color: #e0e0e0;
-    border-radius: 5px;
-    border: 2px solid black;
-    margin: 20px auto;
-    padding: 5px;
-    width: 100px;
-    display: block;
+    float: left; /* Mantiene la caja para el padding */
 }
 
 /* Sección naranja de frase o presentación */
-.quote-section {
+.seccion-frase {
     background: #FB3F1D;
     padding: 20px 20px;
     text-align: center;
@@ -136,13 +122,12 @@ body {
     border-radius: 50%; /* Convierte la imagen en círculo */
     border: 6px solid white;
     margin: auto;
-    display: block;
 }
 
 /* Texto principal de esta sección */
 .texto3 {
     color: white;
-    font-size: 1.4rem;
+    font-size: 22.4px;
     padding: 20px 40px;
     width: 50%;
     margin: 20px auto;
@@ -156,29 +141,29 @@ body {
 }
 
 /* Sección donde van los proyectos */
-.projects-section {
+.seccion-proyectos {
     padding: 10px 20px;
-    max-width: 1200px;
+    max-width: 85%; /* Modificado para ocupar más espacio y acercarse a los bordes */
     margin: 0 auto;
     clear: both;
 }
 
 /* Título de la sección de proyectos */
-.projects-section h2 {
+.seccion-proyectos h2 {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 44.8px;
     margin-bottom: 20px;
     color: #333;
 }
 
 /* Contenedor general de las tarjetas */
-.projects-container {
+.grupo-proyectos {
     overflow: hidden; /* Mantiene ordenados los elementos flotantes */
     margin: 0 -12.5px;
 }
 
 /* Cada espacio donde va una tarjeta */
-.project-cell {
+.espacio-proyecto {
     float: left;
     width: 25%; /* Hace que salgan 4 tarjetas por fila */
     padding: 0 12.5px;
@@ -186,7 +171,7 @@ body {
 }
 
 /* Tarjeta de cada proyecto */
-.project-card {
+.tarjeta-proyecto {
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -195,37 +180,36 @@ body {
 }
 
 /* Imagen de cada tarjeta */
-.project-card img {
+.tarjeta-proyecto img {
     width: 100%;
     height: 200px;
     object-fit: cover; /* Ajusta la imagen sin deformarla */
-    display: block;
 }
 
 /* Parte donde va el texto de la tarjeta */
-.project-info {
+.info-proyecto {
     padding: 20px 24px 28px;
     text-align: center;
 }
 
 /* Título del proyecto */
-.project-info h3 {
+.info-proyecto h3 {
     font-size: 20px;
     margin: 0 0 12px;
     color: #222;
 }
 
 /* Descripción del proyecto */
-.project-info p {
-    font-size: 1rem;
+.info-proyecto p {
+    font-size: 16px;
     color: #666;
     line-height: 1.5;
     margin: 0 0 20px;
-    min-height: 350px; /* Ayuda a que todas las tarjetas queden parejas */
+    min-height: 280px; /* Ayuda a que todas las tarjetas queden parejas */
 }
 
 /* Botón de cada proyecto */
-.btn-project {
+.boton-proyecto {
     background: #FB3F1D;
     color: white;
     padding: 10px 24px;
@@ -233,11 +217,11 @@ body {
     font-weight: bold; /* Hace que el texto del botón resalte más */
     border: 2px solid #000;
     text-decoration: none;
-    display: inline-block;
+    
 }
 
 /* Cambio de color cuando se pasa el mouse */
-.btn-project:hover {
+.boton-proyecto:hover {
     background: #d32f0f;
 }
 
@@ -245,7 +229,7 @@ body {
 .pie {
     background: #2f3742;
     color: white;
-    padding: 15px 370px;
+    padding: 15px 160px;
     text-align: right;
     font-size: 14px;
     clear: both; /* Evita que se mezcle con lo de arriba */
