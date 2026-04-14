@@ -164,7 +164,7 @@ body {
 .espacio-proyecto {
     float: left;
     width: 25%; /* Hace que salgan 4 tarjetas por fila */
-    padding: 0 12.5px;
+    padding: 0 11px;
     margin-bottom: 15px; /* Reducido para acercar las tarjetas al footer */
 }
 
