@@ -169,7 +169,7 @@ body {
     float: left;
     width: 25%; /* Hace que salgan 4 tarjetas por fila */
     padding: 0 12.5px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 /* Tarjeta de cada proyecto */
