@@ -1,4 +1,3 @@
-/* Limpia los espacios raros del navegador y ayuda a controlar mejor tamaños */
 * {
     margin: 0;
     padding: 0;
@@ -11,112 +10,70 @@ body {
     padding: 40px 20px;
 }
 
-/* Caja principal de toda la factura */
+/* Contenedor principal */
 .contenedor-principal {
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    margin: 0 auto; /* centra toda la factura */
+    margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* sombra suave */
-    overflow: hidden; /* evita que algo se salga visualmente */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-/* Encabezado superior */
+/* Encabezado */
 .encabezado {
     display: grid;
-    grid-template-columns: 1fr; /* una sola "base" para montar elementos encima */
+    grid-template-columns: 1fr;
     background-color: #1a1a1a;
     color: #ffffff;
     margin-bottom: 40px;
     min-height: 220px;
 }
 
-/* 
-   Esto hace que TODO dentro del encabezado
-   (incluyendo las formas decorativas)
-   se monte en el mismo espacio.
-   O sea: se superponen.
-*/
 .encabezado > *,
 .encabezado::before,
 .encabezado::after {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
+    grid-area: 1 / 1;
 }
 
-/* 
-   Estas dos piezas no existen en el HTML.
-   Se crean con CSS solo para decorar.
-*/
 .encabezado::before,
 .encabezado::after {
     content: '';
     height: 100%;
-    transform: skewX(-35deg); /* inclina la figura */
-    transform-origin: top left; /* define desde dónde se inclina */
+    transform: skewX(-35deg);
+    transform-origin: top left;
 }
 
-/* Figura blanca diagonal del encabezado */
 .encabezado::before {
-    z-index: 1; /* esta capa va por debajo del contenido */
     width: 100%;
     background-color: #ffffff;
-
-    /* 
-       Esto recorta la forma para que no sea un simple rectángulo.
-       Básicamente dibuja la silueta.
-    */
-    clip-path: polygon(
-        0 calc(100% - 22px),
-        52% calc(100% - 22px),
-        52% 0,
-        calc(52% + 47px) 0,
-        calc(52% + 47px) 22px,
-        calc(52% + 22px) 22px,
-        calc(52% + 22px) 100%,
-        0 100%
-    );
+    clip-path: polygon(0 calc(100% - 22px), 52% calc(100% - 22px), 52% 0, calc(52% + 47px) 0, calc(52% + 47px) 22px, calc(52% + 22px) 22px, calc(52% + 22px) 100%, 0 100%);
 }
 
-/* Figura naranja del lado derecho */
 .encabezado::after {
-    z-index: 2; /* va encima de la blanca pero debajo del texto */
+   
     margin-left: 52%;
     width: 75%;
     background-color: #e8792b;
-
-    /* Otra forma recortada para que se vea más pro */
-    clip-path: polygon(
-        47px 0,
-        100% 0,
-        100% 22px,
-        69px 22px,
-        69px 100%,
-        47px 100%
-    );
+    clip-path: polygon(47px 0, 100% 0, 100% 22px, 69px 22px, 69px 100%, 47px 100%);
 }
 
-/* Parte izquierda del header (logo + nombre) */
+/* Textos del Encabezado */
 .encabezado-izquierda {
-    z-index: 3; /* importante: esto pone el contenido por encima de las figuras */
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin: 50px 0 30px 50px;
     width: 40%;
-    justify-self: start; /* lo pega al inicio dentro del grid */
     align-self: start;
 }
 
-/* Caja del logo */
 .contenedor-imagen-logo {
     width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* evita que el logo se aplaste si falta espacio */
+    flex-shrink: 0;
 }
 
 .contenedor-imagen-logo img {
@@ -124,13 +81,11 @@ body {
     height: auto;
 }
 
-/* Texto del nombre de empresa */
 .titulos-empresa {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 4px; /* separa un poquito los textos */
+    gap: 4px;
     margin-left: 20px;
 }
 
@@ -138,30 +93,26 @@ body {
     font-size: 26px;
     color: #ffffff;
     font-weight: 800;
-    letter-spacing: 1.5px; /* separa un poco las letras */
+    letter-spacing: 1.5px;
 }
 
 .titulos-empresa p {
     font-size: 11px;
     color: #e8792b;
     letter-spacing: 2px;
-    text-transform: uppercase; /* todo en mayúscula */
+    text-transform: uppercase;
     font-weight: 700;
 }
 
-/* Parte derecha del header (número de factura y datos) */
 .bloque-numero-factura {
-    z-index: 3; /* mismo motivo: debe quedar por encima de las formas */
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* todo se alinea hacia la derecha */
+    align-items: flex-end;
     justify-content: center;
     text-align: right;
-    margin-top: 40px;
-    margin-right: 50px;
-    margin-bottom: 30px;
+    margin: 40px 50px 30px 0;
     width: 50%;
-    justify-self: end; /* lo manda al lado derecho del grid */
+    justify-self: end;
     align-self: start;
 }
 
@@ -170,15 +121,15 @@ body {
     margin-bottom: 20px;
     color: #e8792b;
     font-weight: 900;
-    letter-spacing: 3px; /* hace que el título se vea más "serio" */
+    letter-spacing: 3px;
     text-transform: uppercase;
-    line-height: 1; /* reduce el alto interno del texto */
+    line-height: 1;
 }
 
 .info-factura {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* espacio entre filas */
+    gap: 10px;
 }
 
 .fila-factura {
@@ -200,20 +151,19 @@ body {
     font-size: 15px;
     color: #ffffff;
     font-weight: 700;
-    min-width: 120px; /* ayuda a que todos esos valores se vean parejitos */
+    min-width: 120px;
     text-align: right;
 }
 
 /* Cuerpo de la factura */
 .cuerpo-factura {
-    padding: 0 50px 30px 50px;
+    padding: 0 50px 30px;
 }
 
-/* Datos del cliente y método de pago */
 .bloque-datos-cliente {
     display: flex;
     justify-content: space-between;
-    gap: 500px; /* separa mucho las dos columnas */
+    gap: 500px;
     margin-bottom: 40px;
 }
 
@@ -245,7 +195,6 @@ body {
     font-weight: 500;
 }
 
-/* Filas del método de pago */
 .fila-pago {
     display: flex;
     margin-bottom: 8px;
@@ -255,19 +204,19 @@ body {
 }
 
 .etiqueta-pago {
-    width: 130px; /* deja todas las etiquetas del mismo ancho */
+    width: 130px;
     color: #555555;
     font-weight: 600;
 }
 
 .valor-pago {
-    flex: 1; /* hace que el valor ocupe el resto del espacio */
+    flex: 1;
 }
 
 /* Tabla de servicios */
 .tabla-servicios {
     width: 100%;
-    border-collapse: collapse; /* junta bordes para que se vea más limpia */
+    border-collapse: collapse;
     margin-bottom: 30px;
 }
 
@@ -279,7 +228,6 @@ body {
     border-bottom: 4px solid #ffffff;
 }
 
-/* Quita la línea blanca del último lado */
 .tabla-servicios th:last-child,
 .tabla-servicios td:last-child {
     border-right: none;
@@ -291,13 +239,9 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    white-space: nowrap; /* evita que el texto del encabezado se parta en dos líneas */
+    white-space: nowrap;
 }
 
-/* 
-   Esto pinta una fila sí y una no.
-   Sirve para que la tabla se lea más fácil.
-*/
 .tabla-servicios tbody tr:nth-child(odd) td {
     background-color: #f9f9f9;
 }
@@ -307,15 +251,10 @@ body {
     font-weight: 600;
 }
 
-.alinear-derecha {
-    text-align: right;
-}
+.alinear-derecha { text-align: right; }
+.alinear-centro { text-align: center; }
 
-.alinear-centro {
-    text-align: center;
-}
-
-/* Resumen de valores */
+/* Resumen de totales */
 .seccion-totales {
     display: flex;
     margin-bottom: 30px;
@@ -327,7 +266,7 @@ body {
 
 .fila-totales {
     display: flex;
-    justify-content: space-between; /* etiqueta a un lado, valor al otro */
+    justify-content: space-between;
     padding: 8px 20px;
     font-size: 14px;
     color: #1a1a1a;
@@ -339,7 +278,6 @@ body {
     font-weight: 600;
 }
 
-/* Barra del total final */
 .barra-gran-total {
     display: flex;
     justify-content: space-between;
@@ -355,12 +293,12 @@ body {
     text-align: right;
 }
 
-/* Parte legal y firma */
+/* Pie de página */
 .pie-pagina-factura {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* baja la firma para que quede alineada con el bloque de texto */
-    padding: 0 50px 40px 50px;
+    align-items: flex-end;
+    padding: 0 50px 40px;
     margin-top: 10px;
 }
 
@@ -389,7 +327,6 @@ body {
     text-align: center;
 }
 
-/* Esta línea simula el espacio para firmar */
 .linea-firma {
     width: 100%;
     height: 2px;
@@ -405,7 +342,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* Barra decorativa del final */
+/* Adornos finales */
 .adorno-pie-pagina {
     display: grid;
     grid-template-columns: 1fr;
@@ -415,52 +352,36 @@ body {
     overflow: hidden;
 }
 
-/* Barra blanca auxiliar para tapar el fondo negro al bajar la pieza naranja */
 .adorno-pie-pagina::before {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-    width: 153px; /* Cubre exactamente hasta el inicio de la línea negra */
-    height: 8px;  /* El mismo tamaño que bajó la naranja */
+    grid-area: 1 / 1;
+    width: 153px;
+    height: 8px;
     background-color: #ffffff;
     align-self: start;
 }
 
-/* 
-   Igual que en el header:
-   las piezas se montan una encima de otra
-   para formar el diseño final
-*/
 .adorno-pie-pagina > div {
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
+    grid-area: 1 / 1;
     height: 100%;
+    transform-origin: top left;
+    transform: skewX(-35deg);
 }
 
-/* Pieza naranja inclinada */
 .adorno-naranja {
     width: 195px;
     background-color: #e8792b;
-    transform: skewX(-35deg); /* inclina la barra */
-    transform-origin: top left;
-    margin-left: -50px; /* la corre hacia la izquierda para que arranque bien */
-    margin-top: 8px; /* baja la franja naranja un poco */
+    margin: 8px 0 0 -50px;
 }
 
-/* Línea blanca delgadita */
 .adorno-blanco {
     width: 15px;
     background-color: #ffffff;
-    transform: skewX(-35deg);
-    transform-origin: top left;
     margin-left: 138px;
 }
 
-/* Barra negra que completa el diseño */
 .adorno-negro {
     width: 100%;
     background-color: #1a1a1a;
-    transform: skewX(-35deg);
-    transform-origin: top left;
     margin-left: 153px;
 }
