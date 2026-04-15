@@ -415,6 +415,17 @@ body {
     overflow: hidden;
 }
 
+/* Barra blanca auxiliar para tapar el fondo negro al bajar la pieza naranja */
+.adorno-pie-pagina::before {
+    content: '';
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 153px; /* Cubre exactamente hasta el inicio de la línea negra */
+    height: 8px;  /* El mismo tamaño que bajó la naranja */
+    background-color: #ffffff;
+    align-self: start;
+}
+
 /* 
    Igual que en el header:
    las piezas se montan una encima de otra
@@ -433,6 +444,7 @@ body {
     transform: skewX(-35deg); /* inclina la barra */
     transform-origin: top left;
     margin-left: -50px; /* la corre hacia la izquierda para que arranque bien */
+    margin-top: 8px; /* baja la franja naranja un poco */
 }
 
 /* Línea blanca delgadita */
