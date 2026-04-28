@@ -11,13 +11,12 @@ body {
     padding: 40px 20px;
 }
 
-/* ============================================
-   CONTENEDOR PRINCIPAL
+/* CONTENEDOR PRINCIPAL
    Envuelve toda la factura. max-width limita el ancho
    y margin: 0 auto lo centra horizontalmente.
    overflow: hidden evita que los adornos diagonales
    se desborden fuera del contenedor.
-   ============================================ */
+    */
 .contenedor-principal {
     display: flex;
     flex-direction: column;
@@ -28,12 +27,11 @@ body {
     overflow: hidden;
 }
 
-/* ============================================
-   ENCABEZADO
+/* ENCABEZADO
    Usa CSS Grid de una sola columna para superponer
    los pseudo-elementos (::before, ::after) sobre el
    contenido real, creando los adornos diagonales.
-   ============================================ */
+    */
 .encabezado {
     display: grid;
     grid-template-columns: 1fr;
@@ -77,12 +75,11 @@ body {
     clip-path: polygon(47px 0, 100% 0, 100% 22px, 69px 22px, 69px 100%, 47px 100%);
 }
 
-/* ============================================
-   SECCIÓN IZQUIERDA DEL ENCABEZADO
+/* SECCIÓN IZQUIERDA DEL ENCABEZADO
    Contiene el logo y los títulos de la empresa.
    flex-shrink: 0 en el logo evita que se encoja
    cuando el espacio es limitado.
-   ============================================ */
+    */
 .encabezado-izquierda {
     display: flex;
     align-items: center;
@@ -127,12 +124,11 @@ body {
     font-weight: 700;
 }
 
-/* ============================================
-   BLOQUE NÚMERO DE FACTURA (derecha del encabezado)
+/* BLOQUE NÚMERO DE FACTURA (derecha del encabezado)
    justify-self: end lo empuja al extremo derecho
    del grid. Contiene el título "FACTURA" y los
    datos como número, cuenta y fecha.
-   ============================================ */
+    */
 .bloque-numero-factura {
     display: flex;
     flex-direction: column;
@@ -187,22 +183,22 @@ body {
     text-align: right;
 }
 
-/* ============================================
+/* 
    CUERPO DE LA FACTURA
    Contiene los datos del cliente, la tabla de
    servicios, los totales y la barra de gran total.
-   ============================================ */
+    */
 .cuerpo-factura {
     padding: 0 50px 30px;
 }
 
-/* ============================================
+/*  
    BLOQUE DATOS CLIENTE
    Distribuye "Facturar a" (izquierda) y "Método
    de pago" (derecha) usando space-between.
    margin-right: auto en .facturar-a empuja el
    bloque de pago hacia la derecha.
-   ============================================ */
+    */
 .bloque-datos-cliente {
     display: flex;
     justify-content: space-between;
@@ -272,12 +268,11 @@ body {
     white-space: nowrap;
 }
 
-/* ============================================
-   TABLA DE SERVICIOS
+/* TABLA DE SERVICIOS
    border-collapse: collapse elimina el espacio
    entre celdas. Los bordes blancos de 4px crean
    separación visual entre filas y columnas.
-   ============================================ */
+    */
 .tabla-servicios {
     width: 100%;
     border-collapse: collapse;
@@ -325,11 +320,10 @@ body {
     text-align: center;
 }
 
-/* ============================================
-   RESUMEN DE TOTALES
+/* RESUMEN DE TOTALES
    Subtotal, descuento e impuesto distribuidos
    con space-between en cada fila.
-   ============================================ */
+    */
 .seccion-totales {
     display: flex;
     margin-bottom: 30px;
@@ -369,11 +363,10 @@ body {
     text-align: right;
 }
 
-/* ============================================
-   PIE DE PÁGINA
+/*  PIE DE PÁGINA
    Contiene los términos y condiciones a la izquierda
    y la caja de firma a la derecha.
-   ============================================ */
+    */
 .pie-pagina-factura {
     display: flex;
     justify-content: space-between;
@@ -422,12 +415,11 @@ body {
     letter-spacing: 1px;
 }
 
-/* ============================================
-   ADORNOS DEL PIE DE PÁGINA
+/* ADORNOS DEL PIE DE PÁGINA
    Usa CSS Grid + skewX para crear franjas
    diagonales decorativas en la parte inferior,
    replicando el estilo visual del encabezado.
-   ============================================ */
+   */
 .adorno-pie-pagina {
     display: grid;
     grid-template-columns: 1fr;
@@ -471,14 +463,14 @@ body {
     margin-left: 153px;
 }
 
-/* ============================================================
+/* 
    RESPONSIVE 860px — Tablets y móviles
    - Oculta los adornos diagonales (no se ven bien en móvil)
    - El encabezado pasa de grid a flex-column (todo centrado)
    - Los datos del cliente se apilan verticalmente
    - La tabla permite scroll horizontal si se desborda
    - El pie de página se apila verticalmente
-   ============================================================ */
+   */
 @media (max-width: 860px) {
 
     body {
@@ -597,11 +589,10 @@ body {
     }
 }
 
-/* ============================================================
-   RESPONSIVE 356px — Método de pago para pantallas pequeñas
+ 
+/* RESPONSIVE 356px — Método de pago para pantallas pequeñas
    Las filas de pago se apilan verticalmente (etiqueta arriba,
-   valor abajo) para evitar que el texto se corte.
-   ============================================================ */
+   valor abajo) para evitar que el texto se corte. */
 @media (max-width: 356px) {
 
     /* flex-direction: column apila etiqueta y valor en vez
@@ -624,11 +615,11 @@ body {
     }
 }
 
-/* ============================================================
+/* 
    RESPONSIVE 300px — Pantallas muy pequeñas
    Reduce fuentes, paddings y espaciados al mínimo para que
    el contenido quepa sin desbordarse.
-   ============================================================ */
+    */
 @media (max-width: 300px) {
 
     body {
