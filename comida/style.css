@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Círculo verde grande (derecha, cubre nav y hero) */
+body::before {
+    content: '';
+    position: absolute;
+    top: -500px;
+    right: -370px;
+    width: 1400px;
+    height: 1000px;
+    background: #70B44B;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Círculo verde pequeño (sobrepuesto cerca del plato) */
+body::after {
+    content: '';
+    position: absolute;
+    top: 280px;
+    right: -200px;
+    width: 700px;
+    height: 500px;
+    background: #70B44B;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.encabezado {
+    display: flex;
+    padding: 10px 100px;
+    justify-content: flex-end;
+}
+
+
+.encabezado_iconos {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.encabezado_nav {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.encabezado_logo {
+    margin-right: auto;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.encabezado .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.encabezado_iconos img {
+    width: 36px;
+    height: 36px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.btnprin {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 12px;
+    align-self: center;
+    text-decoration: none;
+    color: black;
+}
+
+.encabezado_nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn_resaltado{
+    background-color: aliceblue;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 12px;
+    align-self: center;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.presentacion_contenido .btn_resaltado {
+    margin-top: 90px;
+    margin-left: 0;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+
+.presentacion_titulo{
+    font-size: 82px;
+    font-weight: bold;
+    margin: 50px 0px;
+}
+
+.presentacion_descripcion{
+    font-size: 16px;
+    color: #333;
+    margin-top: 12px;
+}
+
+.presentacion_acciones {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.presentacion_imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.presentacion_imagen img{
+    width: 700px;
+    height: 480px;
+    position: relative;
+    top: 70px;
+    right: 150px;
+}
+
+.btntarjetas1 {
+    background-color: #70B44B;
+    padding: 20px 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+}
+
+.btntarjetas2{
+    background-color: aliceblue;
+    padding: 19px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 12px;
+    align-self: center;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 30px;
+    padding: 60px 100px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 24px;
+    flex: 1;
+    min-width: 240px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta_imagen {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 15px solid #d2e285;
+}
+
+.tarjeta_imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta_titulo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.tarjeta_descripcion {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.tarjeta_acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+}
+
+.tarjeta_acciones .btn_resaltado {
+    background-color: aliceblue;
+    border: 2px solid black;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.btntarjeta2 {
+    background-color: #70B44B;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 12px;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* Why Choose Us Section Styles */
+.valores_seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 100px;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.valores_titulo {
+    font-size: 36px;
+    font-weight: 800;
+    color: #222;
+    text-align: center;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.valores_subtitulo {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    max-width: 600px;
+}
+
+.valores_contenedor {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.valor_tarjeta {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.valor_tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.valor_icono {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7faf5;
+    padding: 18px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.valor_tarjeta:hover .valor_icono {
+    background-color: #eaf3e4;
+}
+
+.valor_titulo_tarjeta {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.valor_descripcion {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.valor_icono img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
